@@ -1,5 +1,5 @@
 module "consul_asg" {
-  source               = ".//asg"
+  source               = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//asg"
   ami_id               = module.ami.consul
   launch_template_name = "consul"
   domain_name          = "consul.com"
@@ -16,7 +16,7 @@ module "consul_asg" {
 }
 
 module "apache_asg" {
-  source               = ".//asg"
+  source               = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//asg"
   ami_id               = module.ami.apache
   launch_template_name = "apache"
   domain_name          = "apache.com"

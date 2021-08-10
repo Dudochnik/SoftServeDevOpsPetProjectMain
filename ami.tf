@@ -1,3 +1,3 @@
 module "ami" {
-  source = ".//ami"
+  source = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//ami"
 }

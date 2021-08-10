@@ -1,5 +1,5 @@
 module "loki_hosted_zone" {
-  source    = ".//hosted_zone"
+  source    = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//hosted_zone"
   name      = "main"
   zone      = "loki.com."
   addresses = module.loki.private_ip
@@ -7,7 +7,7 @@ module "loki_hosted_zone" {
 }
 
 module "cockroachdb_hosted_zone" {
-  source    = ".//hosted_zone"
+  source    = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//hosted_zone"
   name      = "main"
   zone      = "cockroachdb.com."
   addresses = module.cockroachdb.private_ip

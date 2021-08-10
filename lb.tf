@@ -1,5 +1,5 @@
 module "load_balancer" {
-  source                 = ".//lb"
+  source                 = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//lb"
   autoscaling_group_name = module.apache_asg.asg_name
   is_internal            = false
   name                   = "LoadBalancer"

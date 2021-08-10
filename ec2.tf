@@ -1,5 +1,5 @@
 module "bastion" {
-  source              = ".//ec2"
+  source              = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//ec2"
   name                = "Bastion"
   ami_id              = module.ami.bastion
   key_name            = module.key_pair.key_name
@@ -9,7 +9,7 @@ module "bastion" {
 }
 
 module "grafana" {
-  source             = ".//ec2"
+  source             = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//ec2"
   name               = "Grafana"
   ami_id             = module.ami.grafana
   key_name           = module.key_pair.key_name
@@ -18,7 +18,7 @@ module "grafana" {
 }
 
 module "prometheus" {
-  source             = ".//ec2"
+  source             = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//ec2"
   name               = "Prometheus"
   ami_id             = module.ami.prometheus
   key_name           = module.key_pair.key_name
@@ -27,7 +27,7 @@ module "prometheus" {
 }
 
 module "loki" {
-  source             = ".//ec2"
+  source             = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//ec2"
   name               = "Loki"
   ami_id             = module.ami.loki
   key_name           = module.key_pair.key_name
@@ -36,7 +36,7 @@ module "loki" {
 }
 
 module "cockroachdb" {
-  source             = ".//ec2"
+  source             = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//ec2"
   name               = "CockroachDB"
   ami_id             = module.ami.cockroachdb
   key_name           = module.key_pair.key_name

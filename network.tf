@@ -3,13 +3,13 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = ".//vpc"
+  source = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//vpc"
   name   = "Practice VPC"
   cidr   = "10.10.0.0/16"
 }
 
 module "public_subnet_a" {
-  source            = ".//public_subnet"
+  source            = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//public_subnet"
   name              = "Public A"
   cidr              = "10.10.0.0/24"
   availability_zone = "us-west-2a"
@@ -18,7 +18,7 @@ module "public_subnet_a" {
 }
 
 module "public_subnet_b" {
-  source            = ".//public_subnet"
+  source            = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//public_subnet"
   name              = "Public B"
   cidr              = "10.10.42.0/24"
   availability_zone = "us-west-2b"
@@ -27,7 +27,7 @@ module "public_subnet_b" {
 }
 
 module "public_subnet_c" {
-  source            = ".//public_subnet"
+  source            = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//public_subnet"
   name              = "Public C"
   cidr              = "10.10.84.0/24"
   availability_zone = "us-west-2c"
@@ -36,12 +36,12 @@ module "public_subnet_c" {
 }
 
 module "private_route_table" {
-  source = ".//route_table"
+  source = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//route_table"
   vpc_id = module.vpc.id
 }
 
 module "private_subnet_a" {
-  source            = ".//private_subnet"
+  source            = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//private_subnet"
   name              = "Private A"
   cidr              = "10.10.126.0/24"
   availability_zone = "us-west-2a"
@@ -50,7 +50,7 @@ module "private_subnet_a" {
 }
 
 module "private_subnet_b" {
-  source            = ".//private_subnet"
+  source            = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//private_subnet"
   name              = "Private B"
   cidr              = "10.10.168.0/24"
   availability_zone = "us-west-2b"
@@ -59,7 +59,7 @@ module "private_subnet_b" {
 }
 
 module "private_subnet_c" {
-  source            = ".//private_subnet"
+  source            = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//private_subnet"
   name              = "Private C"
   cidr              = "10.10.210.0/24"
   availability_zone = "us-west-2c"

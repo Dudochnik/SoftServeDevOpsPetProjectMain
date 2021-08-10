@@ -1,5 +1,5 @@
 module "bastion_sg" {
-  source = ".//sg"
+  source = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//sg"
   name   = "bastion_sg"
   vpc_id = module.vpc.id
   ingress_rules = {
@@ -21,7 +21,7 @@ module "bastion_sg" {
 }
 
 module "internal_sg" {
-  source = ".//sg"
+  source = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//sg"
   name   = "internal_sg"
   vpc_id = module.vpc.id
   ingress_rules = {
@@ -43,7 +43,7 @@ module "internal_sg" {
 }
 
 module "lb_sg" {
-  source = ".//sg"
+  source = "github.com/Dudochnik/SoftServeDevOpsPetProjectModules//sg"
   name   = "lb_sg"
   vpc_id = module.vpc.id
   ingress_rules = {
